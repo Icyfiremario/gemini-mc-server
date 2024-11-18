@@ -1,6 +1,9 @@
 from flask import Flask, request, jsonify
 
+from chad import Chad
+
 app = Flask(__name__)
+model = Chad()
 
 @app.route('/chat', methods=['POST'])
 def chat():
@@ -10,10 +13,14 @@ def chat():
         return jsonify({"error": "No message provided"}), 400
 
     message = data['message']
+    print(message)
 
-    chad_reponse = "Chad not available"
+    #chad_response = "Chad not available"
+    chad_response = model.talk(message)
 
-    return jsonify({"response": chad_reponse})
+    print(chad_response)
+
+    return jsonify({"response": chad_response})
 
 
 if __name__ == '__main__':
