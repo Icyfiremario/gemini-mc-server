@@ -23,5 +23,9 @@ def chat():
     return jsonify({"response": chad_response})
 
 
+@app.route('/reset', methods=['GET'])
+def reset():
+    model.reboot()
+
 if __name__ == '__main__':
     app.run(debug=True)
