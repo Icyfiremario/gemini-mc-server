@@ -8,6 +8,9 @@ This is the flask server that the Minecraft mod ChadMC uses to send and receive 
 TBD
 
 ### For Linux
+In the chad-mc.service file change any instance of `~/gemini-mc-server/` to the full path of where the repo was cloned to.
+
+
 Run the setup script via `sudo sh setup.sh`.\
 This will create a python virtual environment, install the required packages, and copy a service file to `/etc/systemd/system` and enable the service. 
 
