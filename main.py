@@ -5,6 +5,10 @@ from chad import Chad
 app = Flask(__name__)
 model = Chad()
 
+@app.route('/', methods=['GET'])
+def index():
+    return "Hello world"
+
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.get_json()
