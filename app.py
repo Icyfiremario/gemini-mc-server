@@ -43,7 +43,7 @@ def chat():
 
     print(chad_response)
 
-    return jsonify({"response": chad_response})
+    return jsonify({"response": chad_response}), 400
 
 
 @app.route('/reset', methods=['GET'])
@@ -58,7 +58,7 @@ def reset():
     model = instances[player]
 
     model.reboot()
-    return jsonify({"reset": True})
+    return jsonify({"reset": True}), 400
 
 @app.route('/init', methods=['POST'])
 def init():
