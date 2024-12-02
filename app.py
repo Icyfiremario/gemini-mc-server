@@ -59,7 +59,6 @@ def reset():
 
     model.reboot()
     return jsonify({"reset": True})
-    return jsonify({"reset": True})
 
 @app.route('/init', methods=['POST'])
 def init():
