@@ -12,6 +12,10 @@ players = []
 def index():
     return "Chad lives here."
 
+@app.route('/', methods=['GET'])
+def index():
+    return "Hello world"
+
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.get_json()
@@ -41,10 +45,12 @@ def chat():
     else:
         chad_response = model.talk(message)
 
+    print(chad_response)
+
     return jsonify({"response": chad_response})
 
 
-@app.route('/reset', methods=['POST'])
+@app.route('/reset', methods=['GET'])
 def reset():
     data = request.get_json()
 
@@ -56,6 +62,7 @@ def reset():
     model = instances[player]
 
     model.reboot()
+    return jsonify({"reset": True})
     return jsonify({"reset": True})
 
 @app.route('/init', methods=['POST'])
@@ -76,5 +83,5 @@ def init():
         return jsonify({"info": "Player instance already exists on server"}), 400
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True, host='0.0.0.0')

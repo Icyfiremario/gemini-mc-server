@@ -1,0 +1,1 @@
+systemctl stop chad-mc.service
