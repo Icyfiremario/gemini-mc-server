@@ -3,7 +3,6 @@ from flask import Flask, request, jsonify
 from chad import Chad
 
 app = Flask(__name__)
-#model = Chad()
 
 instances = {}
 players = []
@@ -15,8 +14,6 @@ def index():
 @app.route('/chat', methods=['POST'])
 def chat():
     data = request.get_json()
-
-    #print(players)
 
     if 'PlayerMessage' not in data:
         return jsonify({"error": "No message provided."}), 400
@@ -32,7 +29,6 @@ def chat():
     if player not in players:
         players.append(player)
         instances[player] = Chad()
-        #return jsonify({"error": "Instance for player not on server. Restarting the game should fix this."}), 400
 
     model = instances[player]
 
