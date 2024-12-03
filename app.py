@@ -46,7 +46,7 @@ def chat():
     return jsonify({"response": chad_response}), 400
 
 
-@app.route('/reset', methods=['GET'])
+@app.route('/reset', methods=['POST'])
 def reset():
     data = request.get_json()
 
