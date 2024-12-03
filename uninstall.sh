@@ -1,1 +1,0 @@
-rm -f /etc/systemd/system/chad-mc.service
