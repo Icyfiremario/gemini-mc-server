@@ -58,8 +58,10 @@ def reset():
     model = instances[player]
 
     model.reboot()
+    print(f"AI reset for player: {player}")
     return jsonify({"reset": True}), 400
 
+'''
 @app.route('/init', methods=['POST'])
 def init():
     data = request.get_json()
@@ -76,7 +78,7 @@ def init():
         return jsonify({"info": "Instance for player created on server"}), 400
     else:
         return jsonify({"info": "Player instance already exists on server"}), 400
+'''
 
-
-#if __name__ == '__main__':
-#    app.run(debug=True, host='0.0.0.0')
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
