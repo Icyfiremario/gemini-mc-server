@@ -3,17 +3,12 @@
 ## About
 This is the flask server that the Minecraft mod ChadMC uses to send and receive data to a Google Gemini chatbot
 
-## Setup (NOT READY)
-### For Windows
-TBD
-
+## Setup (NOT READY). MacOS/Windows not currently supported
 ### For Linux
-
-In the chad-mc.service file change any instance of `~/gemini-mc-server/` to the full path of where the repo was cloned to.
-
+Download/clone the hosting branch
 
 Run the setup script via `sudo sh setup.sh`.\
-This will create a python virtual environment, install the required packages, and copy a service file to `/etc/systemd/system` and enable the service. 
+This will copy files to /usr/local/gemini-mc and create an env file and a venv.
 
 In the `.env` file create a new entry `GEMINI_KEY=[KEY]` and replace `[KEY]` with your Gemini API key
 
