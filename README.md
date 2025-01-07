@@ -3,7 +3,7 @@
 ## About
 This is the flask server that the Minecraft mod ChadMC uses to send and receive data to a Google Gemini chatbot
 
-## Setup (NOT READY). MacOS/Windows not currently supported
+## Setup. MacOS/Windows not currently supported
 ### For Linux
 install the dependencies with `apt install -y python-is-python3 python3.10-venv`
 
