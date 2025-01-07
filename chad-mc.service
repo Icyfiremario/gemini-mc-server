@@ -4,8 +4,8 @@ After=network.target
 
 [Service]
 Restart=always
-WorkingDirectory=~/gemini-mc-server
-ExecStart=~/gemini-mc-server/.venv/bin/python3 ~/gemini-mc-server/main.py
+WorkingDirectory=/usr/local/gemini-mc
+ExecStart=/usr/local/gemini-mc/.venv/bin/python3 /usr/local/gemini-mc/main.py
 
 [Install]
 WantedBy=multi-user.target
