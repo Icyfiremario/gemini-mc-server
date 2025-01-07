@@ -5,6 +5,8 @@ This is the flask server that the Minecraft mod ChadMC uses to send and receive 
 
 ## Setup (NOT READY). MacOS/Windows not currently supported
 ### For Linux
+run `apt install -y python-is-python3 python3.10-venv`
+
 Download/clone the hosting branch
 
 Run the setup script via `sudo sh setup.sh`.\
