@@ -55,6 +55,9 @@ def reset():
 
     player = data['PlayerName']
 
+    if player not in instances:
+        return jsonify({"error": "Player not in instances!"}), 400
+
     model = instances[player]
 
     model.reboot()
