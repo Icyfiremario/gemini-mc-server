@@ -9,7 +9,7 @@ install the dependencies with `apt install -y python-is-python3 python3.10-venv`
 
 Clone the repo:\
 With git: `git clone https://github.com/icyfiremario/gemini-mc-server` \
-With gh: `gh repo clone icyfiremario/gemini-mc-server` \ 
+With gh: `gh repo clone icyfiremario/gemini-mc-server` 
 
 Open the cloned folder and checkout to the hosting branch with `git checkout hosting`
 
