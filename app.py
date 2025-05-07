@@ -41,7 +41,7 @@ def chat():
     else:
         chad_response = model.talk(message)
 
-    print(chad_response)
+    #print(chad_response)
 
     return jsonify({"response": chad_response}), 400
 
@@ -61,7 +61,7 @@ def reset():
     model = instances[player]
 
     model.reboot()
-    print(f"AI reset for player: {player}")
+    #print(f"AI reset for player: {player}")
     return jsonify({"reset": True}), 400
 
 '''
